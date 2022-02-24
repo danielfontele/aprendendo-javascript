@@ -1,0 +1,201 @@
+/* Definições Globais ============================================= */
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    color: rgba(240, 246, 252, 0.7);
+}
+
+
+/* Cor e tamanho de fundo ============================================= */
+body {
+    background-color: #0D1117;
+    /* background-image: linear-gradient(230deg, rgba(255,0,0,0), rgba(255,255,255,0.05)); */
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* Cor do rodapé e cabeçalho ============================================= */
+header, footer {
+    background-color: #161B22;
+}
+
+
+/* Definições do Cabeçalho ============================================= */
+header {
+    position: fixed;
+    top: 0vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+/* Barra de navegação - Itens ============================================= */
+header > div.menu > a {
+    margin-left: 2.5vw;
+    font-size: 0.9rem;
+    text-underline-offset: 3px;
+    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 200ms;
+    transition-property: color;
+}
+
+
+/* Efeito clarear texto ao passar mouse ============================================= */
+header > div.menu > a:hover {
+    color: #FFFFFF;
+}
+
+
+/* Definições da imagem home no cabeçalho ============================================= */
+header > a > img {
+    width: 3vmax;
+    height: 3vmax;
+    padding: 1vmax 0;
+    margin-left: 10vw;
+    
+    filter: invert(4%) sepia(44%) saturate(100%) hue-rotate(179deg) brightness(113%) contrast(98%);
+    
+    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 400ms;
+    transition-property: filter;
+}
+
+
+/* Efeito escurecer imagem ao passar mouse ============================================= */
+header > a > img:hover {
+    filter: invert(25%) sepia(2%) saturate(100%) hue-rotate(169deg) brightness(95%) contrast(95%);
+}
+
+
+/* Desbugar conteúdo de cada página ============================================= */
+div > section.app-index {
+    display: flex;
+    padding-top: 4vmax;
+}
+
+
+/* Definições do rodapé ============================================= */
+footer {
+    width: 100vw;
+    position: fixed;
+    bottom: 0%;
+}
+
+
+/* Definições do texto do rodapé ============================================= */
+footer > p {
+    font-size: 0.75rem;
+    color: rgba(240, 246, 252, 0.7);
+    padding: 0 0.5rem;
+    text-align: center;
+    cursor: default;
+}
+
+
+/* TO-DO : Abstrair em outro arquivo ============================================= */
+/* Padrão de Botão ============================================= */
+button, button:disabled {
+    background-color: rgb(33, 38, 45);
+    border: none;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 0.5rem;
+
+    transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 400ms;
+    transition-property: background-color, border, border-radius, border-color;
+
+    
+}
+
+
+/* Cor escura ao desativar Botão ============================================= */
+button:disabled {
+    background: #dddddd;
+}
+
+
+/* Padrão de Input ============================================= */
+input, input:disabled {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    border-radius: 0.5%;
+    padding: 0.5rem;
+    transition: all cubic-bezier(0.445, 0.05, 0.55, 0.95) 2000ms;
+    padding: 5px 10px;
+    display: block;
+}
+
+
+
+/* Preparação para efeito input:hover ============================================= */
+input ~ span { 
+    display:inline-block;
+    width:0px;
+    height: 2px;
+    background: rgba(240, 246, 252, 0.5);
+    position: relative;
+    top:-5px;
+    -webkit-transition: all ease-in-out 1s;
+    -o-transition: all ease-in-out 1s;
+    transition: all ease-in-out 1s;
+}
+
+
+/* Agrupamento de input + efeito ============================================= */
+div.input_container {
+    display: inline-block;
+}
+
+
+/* Imput quando selecionado ============================================= */
+input:focus ~ span, input:active ~ span, input:hover ~ span {
+    width:100%;
+    border: 0;
+}
+
+
+/* Cor escura ao desativar Input ============================================= */
+input:disabled {
+    background: rgba(221, 221, 221, 0.1);
+    border-radius: 0.25rem 0.25rem 0 0;
+}
+
+
+/* Botão - Efeito passar Mouse ============================================= */
+button:hover {
+    background-color: rgb(48, 54, 61);
+    border: 1px solid;
+    border-color: rgb(139, 148, 158);
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+select {
+    outline: none;
+    appearance: none;
+    border: none;
+
+    width: 20vw;
+
+    background-color: transparent;
+    background-image: url("../img/arrow_drop_down_white_24dp.svg");
+    background-position: right 0.25rem center;
+    background-repeat: no-repeat;
+    background-size: auto 50%;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    transition: all ease-in-out 200ms;
+}
+
+select:hover, select:active, select:focus {
+    background-color: #161B22;
+    border: none;
+}

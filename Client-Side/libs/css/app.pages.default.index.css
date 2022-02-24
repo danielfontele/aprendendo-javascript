@@ -1,0 +1,76 @@
+/* Margem Padrão  ============================================= */
+section.app-index > nav {
+    margin-left: 10.3vw;
+}
+
+
+/* Título ============================================= */
+h1.titulo {
+    margin-top: 7vh;
+}
+
+
+/* Campos Input ============================================= */
+input.campoProcurar {
+    width: calc(69vw - 20px);
+    height: 1.85vw;
+}
+
+
+/* Botões ============================================= */
+button.butaoNovo {
+    width: 8vw;
+    height: 2.5vw;
+
+    margin-top: 10px;
+    margin-left: 3vw;
+}
+
+
+/* Cabeçalho Tabela ============================================= */
+tr.linhaCabecalho > th {
+    background-color: rgba(33, 38, 45, 0.35);
+    height: 5vh;
+}
+
+
+/* Células da tabela ============================================= */
+tr > td {
+    height: 3.5vh;
+    border-top: 1px solid rgb(163, 163, 184, 0.1);
+    border-collapse: unset;
+    padding: 0.5vh 0;
+    word-break: keep-all;
+}
+
+
+/* Primeira coluna da tabela ============================================= */
+tr > td:first-child {
+    text-align: center;
+    width: 10vw;
+    word-break: normal;
+}
+
+
+/* Definições da tabela ============================================= */
+table {
+    margin-top: 5vh;
+    border-collapse: collapse;
+    border: 1px solid;
+    outline: none;
+    border-radius: 0.25rem;
+    width: 80vw;
+}
+
+
+/* Ao passar mouse em linha da tabela (menos a primeira) ============================================= */
+tbody > tr:hover {
+    background-color: rgba(33, 38, 45, 0.25);
+    cursor: pointer;
+}
+
+
+/* Agrupamento input + botões ============================================= */
+div.linha {
+    display: flex;
+}

@@ -1,0 +1,17 @@
+button {
+    margin-left: 10vw;
+    display: none;
+}
+
+div.input_container {
+    width: 80vw;
+}
+
+input.campoProcurar {
+    width: calc(80vw - 20px);
+}
+
+tr > td {
+    text-align: center;
+    width: 50%;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinamento Funcionario Client-Side</title>
+    
+    <link rel="stylesheet" href="../../libs/css/normalize.css">
+    <link rel="stylesheet" href="../../libs/css/style.css">
+    <link rel="stylesheet" href="../../libs/css/app.pages.default.index.css">
+    
+    <script src="../../libs/js/bd.js"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="../../index.html" name="home">
+                <img src="../../libs/img/home_white_24dp.svg" alt="Home" height="24px" viewBox="0 0 24 24" width="24px"
+                    fill="#FFFFFF">
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" />
+                <title>Home</title>
+                </img>
+            </a>
+            <div class="menu">
+                <a href="../../index.html">Home</a>
+                <a href="../../pages/departamento/index.html">Departamento</a>
+                <a href="./index.html" style="text-decoration: underline 1px;">Funcionario</a>
+                <a href="../alocarFuncionario/index.html">Alocação</a>
+            </div>
+        </header>
+        <section class="app-index" id="app-index">
+            <nav>
+                <h1 class="titulo">Funcionario</h1>
+                <div class="linha">
+                    <div class="input_container">
+                        <input type="text" id="campoProcurarFuncionario"
+                            class="campoProcurar" placeholder="Filtrar Funcionarios" autofocus>
+                        <span></span>
+                    </div>
+                    <div>
+                        <button type="button" id="butaoNovoFuncionario" class="butaoNovo"
+                            onclick="aplicativo.novo()">Novo</button>
+                    </div>
+                </div>
+
+                <table id="tabelaFuncionario">
+                    <thead>
+                        <tr class="linhaCabecalho">
+                            <th>Id</th>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody id="body_tabelaFuncionario">
+
+                    </tbody>
+                </table>
+
+            </nav>
+        </section>
+        <footer>
+            <p>
+                2022 &copy; All rights reserved to Daniel Fontele &#128516;
+            </p>
+        </footer>
+    </div>
+
+    <!--  -->
+    <script src="../../libs/js/app.pages.funcionario.index.js"></script>
+    <script>
+        const aplicativo = new app.pages.funcionario.index(document.querySelector(".app-index"));
+    </script>
+</body>
+</html>
